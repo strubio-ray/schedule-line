@@ -1,0 +1,6 @@
+<div *ngIf="toggleValue.length" [ngClass]="toggleValue" class="alert-container">
+    <mat-icon [ngClass]="toggleValue" aria-hidden="false">warning</mat-icon>
+    <p *ngIf="toggleValue === toggleTypes.REJECT">Once you click submit below, your Buyer will receive your rejection.</p>
+    <p *ngIf="toggleValue === toggleTypes.CHANGE">Once you click submit below, your Buyer will receive your change request.</p>
+    <p *ngIf="toggleValue === toggleTypes.ACCEPT">Once you click submit below, your Buyer will receive your order confirmation.</p>
+</div>

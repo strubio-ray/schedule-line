@@ -1,0 +1,32 @@
+$main-padding: 1.5rem;
+$border-style: solid lightgray .06rem;
+$break-point: 68rem;
+$accept-color: rgb(59, 135, 104);
+$accept-background-color: rgba(179, 214, 200, 0.366);
+$reject-color: rgb(147, 29, 29);
+$reject-background-color: rgba(255, 138, 138, 0.21);
+$change-color: rgb(77, 163, 217);
+$change-background-color: rgba(134, 215, 255, 0.21);
+$light-blue: rgb(77, 172, 209);
+$dark-blue: rgb(22, 83, 130);
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.schedule-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1;
+    max-width: 70rem;
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.footer {
+    border-bottom: $border-style;
+}

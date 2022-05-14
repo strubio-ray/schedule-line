@@ -1,0 +1,9 @@
+<div class="schedule-container">
+    <div class="header">
+        <app-schedule-line-header (onToggleChange)="onToggleChange($event)"></app-schedule-line-header>
+    </div>
+    <div class="body">
+        <app-schedule-line-info [toggleValue]="toggleValue"></app-schedule-line-info>
+        <app-schedule-line-details></app-schedule-line-details>
+    </div>
+</div>

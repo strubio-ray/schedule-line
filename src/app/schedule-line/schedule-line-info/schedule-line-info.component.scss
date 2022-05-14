@@ -1,0 +1,71 @@
+@import "../../app.component.scss";
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.left-info, .right-info {
+    padding-top: 1rem;
+    white-space: pre;
+}
+
+.left-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: $border-style;
+}
+
+.right-info {
+    flex-grow: 20;
+}
+
+.info-elements {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: $border-style;
+    padding: 1rem;
+}
+
+p {
+    font-size: .9rem;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+}
+
+.input-field {
+    width: 90%;
+}
+
+h4 {
+    margin-bottom: .4rem;
+    color: $light-blue;
+}
+
+@media (min-width: $break-point) {
+    .left-info, .info-item {
+        align-items: flex-start;
+    }
+
+    .left-info {
+        border-bottom: 0;
+        border-right: $border-style;
+    }
+    form {
+        text-align: start;
+    }
+}

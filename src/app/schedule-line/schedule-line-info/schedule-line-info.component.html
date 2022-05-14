@@ -1,0 +1,49 @@
+<div class="info-container">
+    <div class="left-info">
+        <p><strong>Description: </strong>{{leftInfo.description}}s</p>
+        <p><strong>Ship To: </strong>{{leftInfo.shipTo}}</p>
+        <p><strong>Supplier Product ID: </strong>{{leftInfo.supplierProductId}}</p>
+        <p><strong>UPC Number: </strong>{{leftInfo.UPCNumber}}</p>
+        <p><strong>Contract Number: </strong>{{leftInfo.contractNumber}}</p>
+        <mat-form-field class="input-field" appearance="outline">
+            <mat-label>Sales Order Number</mat-label>
+            <input matInput type="number">
+        </mat-form-field>
+    </div>
+    <div class="right-info">
+        <div class="info-elements">
+            <div class="info-item">
+                <h4>Quantity</h4>
+                <strong>Ordered: </strong>
+                <p>{{rightInfo.quantity.ordered}}</p>
+                <strong>Confirmed: </strong>
+                <p>{{rightInfo.quantity.confirmed}}</p>
+            </div>
+            <div class="info-item">
+                <h4>Expected Arrival Date</h4>
+                <strong>Requested: </strong>
+                <p>{{rightInfo.expectedArrivalDate.requested}}</p>
+                <strong>Confirmed: </strong>
+                <p>{{rightInfo.expectedArrivalDate.confirmed}}</p>
+                <form [formGroup]="shipDateForm">
+                    <mat-form-field class="input-field" appearance="outline">
+                      <mat-label>Expected Ship Date</mat-label>
+                      <input matInput [min]="minDate" required [matDatepicker]="picker" formControlName="shipDate">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                      <mat-error *ngIf="shipDateForm.controls.shipDate.hasError('matDatepickerMin')">Invalid ship date</mat-error>
+                      <mat-error *ngIf="shipDateForm.controls.shipDate.errors?.required">Required</mat-error>            
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="info-item">
+                <h4>Price</h4>
+                <strong>Requested: </strong>
+                <p>{{rightInfo.price.requested}}</p>
+                <strong>Confirmed: </strong>
+                <p>{{rightInfo.price.confirmed}}</p>
+            </div>
+        </div>
+        <app-schedule-line-alert [toggleValue]="toggleValue"></app-schedule-line-alert>
+    </div>
+</div>

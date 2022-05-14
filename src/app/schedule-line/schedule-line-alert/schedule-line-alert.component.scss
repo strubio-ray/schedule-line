@@ -1,0 +1,37 @@
+@import "../../app.component.scss";
+.alert-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0rem;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.alert-container.accept {
+    background-color: $accept-background-color;
+}
+
+mat-icon.accept {
+    color: $accept-color;
+}
+
+.alert-container.reject {
+    background-color: $reject-background-color;
+}
+
+mat-icon.reject {
+    color: $reject-color;
+}
+
+.alert-container.change {
+    background-color: $change-background-color;
+}
+
+mat-icon.change {
+    color: $change-color;
+}
+
+p {
+    margin: 0;
+}

@@ -1,0 +1,22 @@
+@import "../../app.component.scss";
+.expansion-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 1rem;
+}
+
+.expansion-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    white-space: pre;
+}
+.expansion-item p {
+    margin-bottom: 0rem;
+}
+
+mat-panel-title {
+    color: $dark-blue;
+}

@@ -1,0 +1,12 @@
+@import "../app.component.scss";
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0rem $main-padding;
+    background-color: white;
+}
+
+.submit {
+    margin: $main-padding .5rem;
+}

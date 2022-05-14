@@ -1,0 +1,33 @@
+<div class="details-container">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Additional Details
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="expansion-container">
+        <div class="expansion-item">
+            <p>
+                <strong>Product Grade Description: </strong>{{additionalDetails.productGradeDescription}}
+            </p>
+        </div>
+        <div class="expansion-item">
+            <p>
+                <strong>Transport Method: </strong>{{additionalDetails.transportMethod}}
+            </p>
+            <p>
+                <strong>Inco Terms (Location): </strong>{{additionalDetails.incoTerms}}
+            </p>
+            <p>
+                <strong>Unloading Point: </strong>{{additionalDetails.unloadingPoint}}
+            </p>
+        </div>
+        <div class="expansion-item">
+            <p>
+                <strong>Ship To Contact: </strong>{{additionalDetails.shipToContact}}
+            </p>
+        </div>
+    </div>
+  </mat-expansion-panel>
+</div>

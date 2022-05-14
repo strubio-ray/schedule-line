@@ -1,0 +1,18 @@
+<div class="header-container">
+    <div class="left-elements">
+        <p><strong>Line {{lineData.lineId | number: '4.0-0' | removeComma}}: </strong>{{lineData.itemName}}</p>
+        <mat-icon aria-hidden="false">assignment</mat-icon>
+        <mat-icon aria-hidden="false">attachment</mat-icon>
+    </div>
+    <div class="right-elements">
+        <button mat-raised-button>
+            <mat-icon aria-hidden="false">add</mat-icon>
+            ADD SCHEDULE
+        </button>
+        <mat-button-toggle-group (change)="onValChange($event.value)" appearance="legacy" name="scheduleAction">
+            <mat-button-toggle data-test-id="acceptToggle" class="{{toggleTypes.ACCEPT}}" value="{{toggleTypes.ACCEPT}}">ACCEPT</mat-button-toggle>
+            <mat-button-toggle class="{{toggleTypes.REJECT}}" value="{{toggleTypes.REJECT}}">REJECT</mat-button-toggle>
+            <mat-button-toggle class="{{toggleTypes.CHANGE}}" value="{{toggleTypes.CHANGE}}">CHANGE</mat-button-toggle>
+        </mat-button-toggle-group> 
+    </div>
+</div>
